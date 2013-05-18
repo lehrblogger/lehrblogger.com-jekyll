@@ -1,0 +1,7 @@
+<a href='{{ item.url }}'>{{ item.title }}</a>
+    {% if item.start_date %}
+        from {{ item.start_date}} to {{ item.date | date: "%B %Y"}}
+    {% else %}
+        on {{ item.date | date_to_long_string}}</a>
+    {% endif %}
+<p>{{ item.excerpt }}</p>
